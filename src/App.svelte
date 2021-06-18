@@ -1,12 +1,27 @@
 <script>
     let nombre = 'Makros'
-    const nombre_2 = 'Sandre'
-    nombre = "<strong style='color: firebrick'>Pedro</strong>"
-	const url = "https://api.com"
+    let v1 = 0
+    let v2 = 0
+    let check = false
 </script>
 
 <main>
-    <p>{@html nombre}</p>
+    <h1>DATABINDING</h1>
+
+    <h2>{nombre}</h2>
+    <input type="text" bind:value={nombre}>
+
+    <hr>
+
+    Valor 1 <input type="range" bind:value={v1}>
+    Valor 2 <input type="range" bind:value={v2}>
+    <p>{v1} + {v2} = {v1 + v2}</p>
+
+    <hr>
+
+    Habilitar botón <input type="checkbox" bind:checked={check}>
+    <button disabled="{!check}">Guardar</button>
+
 </main>
 
 <style>
