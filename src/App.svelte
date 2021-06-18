@@ -1,10 +1,12 @@
 <script>
 	export let name;
+	let nombre = 'Makros';
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<h2>Test título H2 {nombre}</h2>
 </main>
 
 <style>
@@ -20,6 +22,9 @@
 		text-transform: uppercase;
 		font-size: 4em;
 		font-weight: 100;
+	}
+	h2{
+		color: red;
 	}
 
 	@media (min-width: 640px) {
